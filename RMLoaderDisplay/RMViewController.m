@@ -122,7 +122,11 @@
 - (void)updateView:(CGFloat)val
 {
     self.downloadedBytes+=val;
-    [_closedIndicator updateWithTotalBytes:100 downloadedBytes:self.downloadedBytes];
+//    [_closedIndicator updateWithTotalBytes:100 downloadedBytes:self.downloadedBytes];
+    [_closedIndicator updateWithTotalBytes:100 downloadedBytes:self.downloadedBytes animationCompletion:^(CGFloat downloadedBytes) {
+        NSLog(@"animationCompletion: %f", downloadedBytes);
+    }];
+    
     [_filledIndicator updateWithTotalBytes:100 downloadedBytes:self.downloadedBytes];
     [_mixedIndicator updateWithTotalBytes:100 downloadedBytes:self.downloadedBytes];
 }
