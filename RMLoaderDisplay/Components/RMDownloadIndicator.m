@@ -231,7 +231,13 @@
 }
 
 #pragma mark - update indicator
+
 - (void)updateWithTotalBytes:(CGFloat)bytes downloadedBytes:(CGFloat)downloadedBytes
+{
+    [self updateWithTotalBytes:bytes downloadedBytes:downloadedBytes animationCompletion:nil];
+}
+
+- (void)updateWithTotalBytes:(CGFloat)bytes downloadedBytes:(CGFloat)downloadedBytes animationCompletion:(RMDownloadIndicatorAnimationCompletion)animationCompletion
 {
     _lastUpdatedPath = [UIBezierPath bezierPathWithCGPath:_animatingLayer.path];
     
@@ -244,12 +250,19 @@
     _animatingLayer.path = (__bridge CGPathRef)((id)_paths[(_paths.count -1)]);
     self.lastSourceAngle = destinationAngle;
     
+    [CATransaction begin];
     CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"path"];
     [pathAnimation setValues:_paths];
     [pathAnimation setDuration:self.animationDuration];
     [pathAnimation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     [pathAnimation setRemovedOnCompletion:YES];
+    
+    [CATransaction setCompletionBlock:^{
+        if (animationCompletion) animationCompletion(downloadedBytes);
+    }];
+    
     [_animatingLayer addAnimation:pathAnimation forKey:@"path"];
+    [CATransaction commit];
     
     //[self.displayLabel updateValue:downloadedBytes/bytes];
 }
