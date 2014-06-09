@@ -21,8 +21,8 @@
 		3D2EC14E189A5E7F00E5F33C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2EC130189A5E7F00E5F33C /* UIKit.framework */; };
 		3D2EC156189A5E7F00E5F33C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D2EC154189A5E7F00E5F33C /* InfoPlist.strings */; };
 		3D2EC158189A5E7F00E5F33C /* RMLoaderDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EC157189A5E7F00E5F33C /* RMLoaderDisplayTests.m */; };
-		3D2EC164189A5F5600E5F33C /* RMDownloadIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EC163189A5F5600E5F33C /* RMDownloadIndicator.m */; };
-		3D2EC167189A5F8C00E5F33C /* RMDisplayLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EC166189A5F8C00E5F33C /* RMDisplayLabel.m */; };
+		B81380A11945907300242E58 /* RMDisplayLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B813809E1945907300242E58 /* RMDisplayLabel.m */; };
+		B81380A21945907300242E58 /* RMDownloadIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B81380A01945907300242E58 /* RMDownloadIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +55,10 @@
 		3D2EC153189A5E7F00E5F33C /* RMLoaderDisplayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RMLoaderDisplayTests-Info.plist"; sourceTree = "<group>"; };
 		3D2EC155189A5E7F00E5F33C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D2EC157189A5E7F00E5F33C /* RMLoaderDisplayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMLoaderDisplayTests.m; sourceTree = "<group>"; };
-		3D2EC162189A5F5600E5F33C /* RMDownloadIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDownloadIndicator.h; sourceTree = "<group>"; };
-		3D2EC163189A5F5600E5F33C /* RMDownloadIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDownloadIndicator.m; sourceTree = "<group>"; };
-		3D2EC165189A5F8C00E5F33C /* RMDisplayLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDisplayLabel.h; sourceTree = "<group>"; };
-		3D2EC166189A5F8C00E5F33C /* RMDisplayLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDisplayLabel.m; sourceTree = "<group>"; };
+		B813809D1945907300242E58 /* RMDisplayLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDisplayLabel.h; sourceTree = "<group>"; };
+		B813809E1945907300242E58 /* RMDisplayLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDisplayLabel.m; sourceTree = "<group>"; };
+		B813809F1945907300242E58 /* RMDownloadIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDownloadIndicator.h; sourceTree = "<group>"; };
+		B81380A01945907300242E58 /* RMDownloadIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDownloadIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				3D2EC132189A5E7F00E5F33C /* RMLoaderDisplay */,
+				B813809C1945907300242E58 /* Classes */,
 				3D2EC151189A5E7F00E5F33C /* RMLoaderDisplayTests */,
 				3D2EC12B189A5E7F00E5F33C /* Frameworks */,
 				3D2EC12A189A5E7F00E5F33C /* Products */,
@@ -118,7 +119,6 @@
 		3D2EC132189A5E7F00E5F33C /* RMLoaderDisplay */ = {
 			isa = PBXGroup;
 			children = (
-				3D2EC161189A5F5600E5F33C /* Components */,
 				3D2EC13B189A5E7F00E5F33C /* RMAppDelegate.h */,
 				3D2EC13C189A5E7F00E5F33C /* RMAppDelegate.m */,
 				3D2EC13E189A5E7F00E5F33C /* Main.storyboard */,
@@ -159,15 +159,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3D2EC161189A5F5600E5F33C /* Components */ = {
+		B813809C1945907300242E58 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3D2EC165189A5F8C00E5F33C /* RMDisplayLabel.h */,
-				3D2EC166189A5F8C00E5F33C /* RMDisplayLabel.m */,
-				3D2EC162189A5F5600E5F33C /* RMDownloadIndicator.h */,
-				3D2EC163189A5F5600E5F33C /* RMDownloadIndicator.m */,
+				B813809D1945907300242E58 /* RMDisplayLabel.h */,
+				B813809E1945907300242E58 /* RMDisplayLabel.m */,
+				B813809F1945907300242E58 /* RMDownloadIndicator.h */,
+				B81380A01945907300242E58 /* RMDownloadIndicator.m */,
 			);
-			path = Components;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D2EC164189A5F5600E5F33C /* RMDownloadIndicator.m in Sources */,
+				B81380A11945907300242E58 /* RMDisplayLabel.m in Sources */,
 				3D2EC139189A5E7F00E5F33C /* main.m in Sources */,
-				3D2EC167189A5F8C00E5F33C /* RMDisplayLabel.m in Sources */,
 				3D2EC13D189A5E7F00E5F33C /* RMAppDelegate.m in Sources */,
+				B81380A21945907300242E58 /* RMDownloadIndicator.m in Sources */,
 				3D2EC143189A5E7F00E5F33C /* RMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

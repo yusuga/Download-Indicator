@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^RMDownloadIndicatorAnimationCompletion)(CGFloat downloadedBytes);
+
 typedef enum {
     kRMClosedIndicator=0,
     kRMFilledIndicator,
@@ -40,5 +42,6 @@ typedef enum {
 
 // update the downloadIndicator
 - (void)updateWithTotalBytes:(CGFloat)bytes downloadedBytes:(CGFloat)downloadedBytes;
+- (void)updateWithTotalBytes:(CGFloat)bytes downloadedBytes:(CGFloat)downloadedBytes animationCompletion:(RMDownloadIndicatorAnimationCompletion)animationCompletion;
 
 @end
