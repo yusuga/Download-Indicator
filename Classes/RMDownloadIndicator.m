@@ -307,4 +307,12 @@ float degreeToRadian(float degree)
     self.animationDuration = duration;
 }
 
+#pragma mark -
+#pragma mark Public Getter Methods
+
+- (CGFloat)lineWidth
+{
+    return self.coverWidth;
+}
+
 @end

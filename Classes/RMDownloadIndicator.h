@@ -27,6 +27,8 @@ typedef enum {
 // used to stroke the covering slice (default: (kRMClosedIndicator = white), (kRMMixedIndictor = white))
 @property(nonatomic, strong)UIColor *strokeColor;
 
+- (CGFloat)lineWidth;
+
 // used to stroke the background path the covering slice (default: (kRMClosedIndicator = gray))
 @property(nonatomic, strong)UIColor *closedIndicatorBackgroundStrokeColor;
 
