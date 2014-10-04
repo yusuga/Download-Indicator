@@ -64,14 +64,13 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)setFrame:(CGRect)frame
 {
-    // Drawing code
+    [super setFrame:frame];
+    if (self.currentDownloadedBytes > 0.f) {
+        [self updateWithTotalBytes:1.f downloadedBytes:self.currentDownloadedBytes];
+    }
 }
-*/
 
 - (void)initAttributes
 {
