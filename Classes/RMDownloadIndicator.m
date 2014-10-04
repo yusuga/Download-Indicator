@@ -38,6 +38,8 @@
 // this is display label that displays % downloaded
 @property(nonatomic, strong)RMDisplayLabel *displayLabel;
 
+@property(nonatomic, assign)CGFloat currentDownloadedBytes;
+
 @end
 
 @implementation RMDownloadIndicator
@@ -238,6 +240,8 @@
 
 - (void)updateWithTotalBytes:(CGFloat)bytes downloadedBytes:(CGFloat)downloadedBytes animationCompletion:(RMDownloadIndicatorAnimationCompletion)animationCompletion
 {
+    self.currentDownloadedBytes = downloadedBytes;
+    
     _lastUpdatedPath = [UIBezierPath bezierPathWithCGPath:_animatingLayer.path];
     
     [_paths removeAllObjects];
